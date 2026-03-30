@@ -22,7 +22,9 @@ app.use('/api/attendance', require('./routes/attendanceRoutes'));
 app.use('/api/academic', require('./routes/academicRoutes'));
 app.use('/api/fees', require('./routes/feeRoutes'));
 app.use('/api/dashboard', require('./routes/dashboardRoutes'));
-
+app.get('/test', (req, res) => {
+  res.json({ message: "API working" });
+});
 // Health check
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'Smart Student Management System API running optimally.' });
